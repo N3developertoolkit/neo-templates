@@ -1,0 +1,6 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CustomProjectLogic" AfterTargets="Build" Inputs="$(TargetPath)" 
+          Outputs="$(TargetDir)$(TargetName).avm;$(TargetDir)$(TargetName).abi.json;$(TargetDir)$(TargetName).md.json">
+    <Exec WorkingDirectory="$(TargetDir)" Command="neon-de $(TargetFileName)"/>
+  </Target>
+</Project>
