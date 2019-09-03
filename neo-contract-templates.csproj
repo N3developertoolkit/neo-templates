@@ -5,7 +5,7 @@
     <PackageVersion>1.0.0</PackageVersion>
     <PackageId>Neo.Contract.Templates</PackageId>
     <Title>NEO Smart Contract Templates</Title>
-    <Authors>Me</Authors>
+    <Authors>NEO Global Development Seattle</Authors>
     <Description>Templates to use when creating a smart contract for the NEO Blockchain.</Description>
     <PackageTags>dotnet-new;templates;neo;smart-contract</PackageTags>
 
@@ -20,6 +20,5 @@
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
-
 
 </Project>
