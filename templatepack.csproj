@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.8.0</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageId>Neo.Contract.Templates</PackageId>
     <Title>NEO Smart Contract Templates</Title>
     <Authors>Me</Authors>
