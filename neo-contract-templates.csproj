@@ -4,9 +4,9 @@
     <PackageType>Template</PackageType>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageId>Neo.Contract.Templates</PackageId>
-    <Title>NEO Smart Contract Templates</Title>
-    <Authors>NEO Global Development Seattle</Authors>
-    <Description>Templates to use when creating a smart contract for the NEO Blockchain.</Description>
+    <Title>Neo Smart Contract Templates</Title>
+    <Authors>Neo Global Development Seattle</Authors>
+    <Description>Templates to use when creating a smart contract for the Neo Blockchain.</Description>
     <PackageTags>dotnet-new;templates;neo;smart-contract</PackageTags>
 
     <TargetFramework>netstandard2.0</TargetFramework>
