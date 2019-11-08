@@ -1,4 +1,4 @@
-# Neo Smart Contract Tempaltes Change Log
+# Neo Smart Contract Templates Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -12,6 +12,12 @@ of the commit that generated the build. As such, released versions of this exten
 will not have contiguous patch numbers. Initial major and minor releases will be documented
 in this file without a patch number. Patch version will be included for bug fix releases, but
 may not exactly match a publicly released version.
+
+## [1.0.7] - 2019-11-08
+
+### Changed
+
+- updated Neo branding as per https://neo.org/presskit
 
 ## [1.0] - 2019-09-13
 
