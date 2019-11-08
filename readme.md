@@ -1,4 +1,4 @@
-# NEO Smart Contract Templates
+# Neo Smart Contract Templates
 
 [![Build Status](https://dev.azure.com/NGDSeattle/Public/_apis/build/status/ngdseattle.neo-templates?branchName=master)](https://dev.azure.com/NGDSeattle/Public/_build/latest?definitionId=29&branchName=master)
 
