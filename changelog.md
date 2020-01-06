@@ -17,10 +17,13 @@ may not exactly match a publicly released version.
 
 ### Added
 
-- Contract metadata attributes
+- Added contract metadata attributes
 
 ### Changed
 
+- Templates updated to depend on Neo.SmartContract.Framework v2.10.0
+- Run NEON as part of build target instead of publish target.
+  - Note, neon output is copied to publish directory for backwards compatibility.
 
 ### Removed
 
