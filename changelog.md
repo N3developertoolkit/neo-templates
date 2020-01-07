@@ -13,6 +13,22 @@ will not have contiguous patch numbers. Initial major and minor releases will be
 in this file without a patch number. Patch version will be included for bug fix releases, but
 may not exactly match a publicly released version.
 
+## [1.1] - Unreleased
+
+### Added
+
+- Added contract metadata attributes
+
+### Changed
+
+- Templates updated to depend on Neo.SmartContract.Framework v2.10.0
+- Run NEON as part of build target instead of publish target.
+  - Note, neon output is copied to publish directory for backwards compatibility.
+
+### Removed
+
+- `--enable-debug-enhancements` option. Templates only work with official NEON tool now.
+
 ## [1.0.7] - 2019-11-08
 
 ### Changed
