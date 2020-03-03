@@ -1,3 +1,5 @@
+using System;
+
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Services.Neo;
 
@@ -10,8 +12,30 @@ using Neo.SmartContract.Framework.Services.Neo;
 
 public class SmartContract1 : SmartContract
 {
-    public static void Main()
+    public static object Main(string method, object[] args)
     {
-        Storage.Put(Storage.CurrentContext, "Hello", "World");
+        if (method == "PutValue") 
+        {
+            return PutValue(args[0] as byte[]);
+        } 
+        else if (method == "GetValue")
+        {
+            return GetValue();
+        }
+        else 
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public static byte[] PutValue(byte[] obj)
+    {
+        Storage.Put(Storage.CurrentContext, "StoredData", obj);
+        return obj;
+    }
+
+    public static byte[] GetValue()
+    {
+        return Storage.Get(Storage.CurrentContext, "StoredData");
     }
 }
