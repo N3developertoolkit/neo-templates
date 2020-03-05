@@ -1,5 +1,3 @@
-Imports System
-
 Imports Neo.SmartContract.Framework
 Imports Neo.SmartContract.Framework.Services.Neo
 
@@ -13,13 +11,13 @@ Imports Neo.SmartContract.Framework.Services.Neo
 
 Public Class SmartContract1 : Inherits SmartContract
 
-    Public Shared Function Main(method As String, args As Object()) As Byte()
+    Public Shared Function Main(method As String, args As Object()) As Object
         If String.Equals(method, "PutValue") Then
             Main = PutValue(args(0))
         ElseIf String.Equals(method, "GetValue") Then
             Main = GetValue()
         Else
-            Throw new NotImplementedException()
+            Main = false
         End If
     End Function
 

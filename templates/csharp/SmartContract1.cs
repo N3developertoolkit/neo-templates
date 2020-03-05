@@ -1,5 +1,3 @@
-using System;
-
 using Neo.SmartContract.Framework;
 using Neo.SmartContract.Framework.Services.Neo;
 
@@ -24,7 +22,7 @@ public class SmartContract1 : SmartContract
         }
         else 
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 
