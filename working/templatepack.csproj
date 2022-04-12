@@ -3,11 +3,12 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0</PackageVersion>
-    <PackageId>AdatumCorporation.Utility.Templates</PackageId>
-    <Title>AdatumCorporation Templates</Title>
-    <Authors>Me</Authors>
-    <Description>Templates to use when creating an application for Adatum Corporation.</Description>
-    <PackageTags>dotnet-new;templates;contoso</PackageTags>
+    <PackageId>Neo.Contract.Templates</PackageId>
+    <Title>Neo Smart Contract Templates</Title>
+    <Authors>ngd Enterprise</Authors>
+    <Copyright>2015-2022 The Neo Project</Copyright>
+    <Description>Templates to use when creating a smart contract for the Neo N3 Blockchain.</Description>
+    <PackageTags>dotnet-new;templates;neo;smart-contract</PackageTags>
 
     <TargetFramework>netstandard2.0</TargetFramework>
 
@@ -21,6 +22,7 @@
   <ItemGroup>
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
     <Compile Remove="**\*" />
+    <None Include="../neo-logo-72.png" Pack="true" Visible="false" PackagePath=""/>
   </ItemGroup>
 
 </Project>
