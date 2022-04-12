@@ -22,7 +22,7 @@
   <ItemGroup>
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
     <Compile Remove="**\*" />
-    <None Include="../neo-logo-72.png" Pack="true" Visible="false" PackagePath=""/>
+    <None Include="./neo-logo-72.png" Pack="true" Visible="false" PackagePath=""/>
   </ItemGroup>
 
 </Project>
