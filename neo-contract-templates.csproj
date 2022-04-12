@@ -17,13 +17,14 @@
     <PackageVersion>1.0.0</PackageVersion>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/ngdseattle/neo-templates.git</RepositoryUrl>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Title>Neo Smart Contract Templates</Title>
   </PropertyGroup>
 
   <ItemGroup>
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
     <Compile Remove="**\*" />
+    <None Include="./neo-logo-72.png" Pack="true" Visible="false" PackagePath=""/>
   </ItemGroup>
 
 </Project>
