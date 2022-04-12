@@ -1,0 +1,51 @@
+name: Build templates
+
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+      - 'release/**'
+  push:
+    branches:
+      - master
+      - develop
+      - 'release/**'
+    paths-ignore:
+      - 'readme.md'
+      - 'CHANGELOG.md'
+      - 'docs/**'
+
+env:
+  AZURE_ARTIFACTS_FEED_URL: https://pkgs.dev.azure.com/ngdenterprise/Build/_packaging/public/nuget/v3/index.json
+  CONFIGURATION: 'Release'
+  DOTNET_VERSION: '6.0.x'
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        source-url: ${{ env.AZURE_ARTIFACTS_FEED_URL }}
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.AZURE_ARTIFACTS_PAT }} 
+    - name: Pack
+      run: |
+        dotnet restore
+        dotnet build --configuration ${{ env.CONFIGURATION }} --no-restore --verbosity normal
+        dotnet pack --configuration ${{ env.CONFIGURATION }} --output ./out --no-build --verbosity normal
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: packages
+        path: ./out
+    - name: Push to Azure Artifacts
+      if: ${{ ((github.ref == 'refs/heads/master') || (github.ref == 'refs/heads/develop')) && (github.event_name == 'push') }}
+      run: dotnet nuget push --api-key AzureArtifacts out/*.nupkg
